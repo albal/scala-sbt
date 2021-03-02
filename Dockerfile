@@ -22,7 +22,7 @@ RUN \
 
 # Install sbt
 RUN \
-  cd /root \
+  cd /root && \
   curl -L -o sbt-$SBT_VERSION.deb http://dl.bintray.com/sbt/debian/sbt-$SBT_VERSION.deb && \
   dpkg -i sbt-$SBT_VERSION.deb && \
   rm sbt-$SBT_VERSION.deb && \
