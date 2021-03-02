@@ -5,7 +5,7 @@
 #
 
 # Pull base image
-FROM  openjdk:8
+FROM openjdk:8
 
 ENV SCALA_VERSION 2.12.13
 ENV SBT_VERSION 1.4.7
@@ -22,6 +22,7 @@ RUN \
 
 # Install sbt
 RUN \
+  cd /root \
   curl -L -o sbt-$SBT_VERSION.deb http://dl.bintray.com/sbt/debian/sbt-$SBT_VERSION.deb && \
   dpkg -i sbt-$SBT_VERSION.deb && \
   rm sbt-$SBT_VERSION.deb && \
