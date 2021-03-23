@@ -31,7 +31,7 @@ RUN \
   sbt sbtVersion
   
 # Install AWS Cli
-RUN pip3 install awscli
+RUN apt-get install python3-pip -y && pip3 install awscli
 
 # Define working directory
 WORKDIR /root
